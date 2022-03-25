@@ -1,17 +1,16 @@
 THREE.Fire
 =====================
 
-## Description
 THREE.Fire is a ray tracing based [real-time procedural volumetric fire](http://dl.acm.org/citation.cfm?id=1230131) object for Three.js.
 It extends the THREE.Mesh object that uses a THREE.BoxGeometry to generate fire shapes that are made up of a fire texture and noise.
-I have updated it to comply with more modern Three.js implementations and has been tested working on Three.js revision 131
+I've updated it to comply with more modern Three.js implementations and has been tested working on Three.js revision 131.
 
 [Demo](https://Fooly-Cooly.github.io/THREE.Fire)
 
 ## Preview
 <img src="https://raw.githubusercontent.com/Fooly-Cooly/Fooly-Cooly.github.io/master/THREE.Fire/fire.gif" height="350" alt="Example" /><img src="https://raw.githubusercontent.com/Fooly-Cooly/Fooly-Cooly.github.io/master/THREE.Fire/wireframe.gif" height="350" alt="Wireframe" />
 
-## Example
+## Usage Example
 
 ```javascript
 
