@@ -1,10 +1,15 @@
 THREE.Fire
 =====================
 
-Ray tracing based [real-time procedural volumetric fire](http://dl.acm.org/citation.cfm?id=1230131) object for Three.js.
+## Description
+THREE.Fire is a ray tracing based [real-time procedural volumetric fire](http://dl.acm.org/citation.cfm?id=1230131) object for Three.js.
+It extends the THREE.Mesh object that uses a THREE.BoxGeometry to generate fire shapes that are made up of a fire texture and noise.
+I have updated it to comply with more modern Three.js implementations and has been tested working on Three.js revision 131
 
-![fire](https://raw.githubusercontent.com/Fooly-Cooly/Fooly-Cooly.github.io/master/THREE.Fire/fire.gif)
+[Demo](https://Fooly-Cooly.github.io/THREE.Fire)
 
+## Preview
+<img src="https://raw.githubusercontent.com/Fooly-Cooly/Fooly-Cooly.github.io/master/THREE.Fire/fire.gif" height="350" alt="Example" /><img src="https://raw.githubusercontent.com/Fooly-Cooly/Fooly-Cooly.github.io/master/THREE.Fire/wireframe.gif" height="350" alt="Wireframe" />
 
 ## Example
 
@@ -18,9 +23,9 @@ let renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha:
 	renderer.setPixelRatio( window.devicePixelRatio );
 	renderer.setSize( window.innerWidth, window.innerHeight );
 
-let camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 500 ); // Parameters: (fov, aspect, near, far)
-	camera.position.set( 0.00, -0.04, 0.50 ); // ( x, y, z )
-	camera.rotation.set( 0.00, 0.00, 0.00 ); // ( x, y, z )
+let camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 0.1, 500 );
+	camera.position.set( 0.00, -0.04, 0.50 );
+	camera.rotation.set( 0.00, 0.00, 0.00 );
 	camera.fov = 60;
 
 let scene = new THREE.Scene();
@@ -40,24 +45,6 @@ animate();
 
 ```
 
-## Description
-
-THREE.Fire is an extended THREE.Mesh object that uses a THREE.BoxGeometry.
-It generates fire shapes that are made up of noise and a fire texture.
-I have updated it to comply with more modern Three.js implementations.
-It's been tested working on Three.js revision 131
-
-![wireframe](https://raw.githubusercontent.com/Fooly-Cooly/Fooly-Cooly.github.io/master/THREE.Fire/wireframe.gif "Visualized wireframe of THREE.Fire's geometry")
-
-You must pass a fire texture argument to THREE.Fire like this.
-![firetex](https://raw.githubusercontent.com/Fooly-Cooly/Fooly-Cooly.github.io/master/THREE.Fire/Fire.png "Fire texture")
-
-[for more details.](http://dl.acm.org/citation.cfm?id=1230131)
-
-## Demo
-
-[Demo](https://Fooly-Cooly.github.io/THREE.Fire)
-
 ## Sources
 
 - Original implementation - https://github.com/mattatz/THREE.Fire
@@ -67,4 +54,3 @@ You must pass a fire texture argument to THREE.Fire like this.
 - webgl-noise - https://github.com/ashima/webgl-noise/blob/master/src/noise3D.glsl
 
 - primitive: blog | object space raymarching - http://i-saint.hatenablog.com/entry/2015/08/24/225254
-
